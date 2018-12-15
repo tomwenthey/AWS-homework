@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <% if (snapshot && snapshot.status === 1) { %>
+    <table>
+      <tr>
+        <th>OwnerId</th>
+        <th>SnapshotId</th>
+        <th>StartTime</th>
+        <th>State</th>
+        <th>VolumeId</th>
+        <th>VolumeSize</th>
+        <th>Encrypted</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td><%= snapshot.message.OwnerId %></td>
+        <td><%= snapshot.message.SnapshotId %></td>
+        <td><%= snapshot.message.StartTime %></td>
+        <td><%= snapshot.message.State %></td>
+        <td><%= snapshot.message.VolumeId %></td>
+        <td><%= snapshot.message.VolumeSize %></td>
+        <td><%= snapshot.message.Encrypted %></td>
+        <td><%= snapshot.message.Description %></td>
+      </tr>
+    </table>
+
+    <% } else { %>
+    <h2>something goes wrong...</h2>
+    <% } %>
+  </body>
+</html>
